@@ -77,4 +77,17 @@ class TestFriends < MiniTest::Test
     assert_equal("Friends", result)
   end
 
+  # 3. For a given person, check if they like a particular food
+  # (e.g. function should return true for @person3 when checked for "stew", false for "spinach")
+
+  def test_like_food
+    result = like_food(@person2, "soup")
+    assert_equal(true, result)
+  end
+  #
+  def test_like_food
+    result = like_food(@person2, "sandwiches")
+    assert_equal(false, result)
+  end
+
 end

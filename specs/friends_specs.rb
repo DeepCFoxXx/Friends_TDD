@@ -109,6 +109,10 @@ class TestFriends < MiniTest::Test
   # 6. Find the total of everyone's money
   # (hint: use the people array)
 
+  def test_total_funds
+    assert_equal(143, total_funds(@people))
+  end
+
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: you need to pass in the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed)

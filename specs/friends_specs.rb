@@ -134,6 +134,10 @@ class TestFriends < MiniTest::Test
   # 9. Find people with no friends
   # (hint: return an array, there might be more people in the future with no friends!)
 
+  def test_no_friends
+    assert_equal([@person5],no_friends(@people))
+  end
+
   # Optional, VERY TOUGH
   # 10. Find the people who have the same favourite tv show
 

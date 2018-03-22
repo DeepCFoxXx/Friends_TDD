@@ -61,3 +61,15 @@ def all_foods(people)
   end
   return foods
 end
+
+#
+
+def no_friends(people)
+  result = []
+  for person in people
+    result << person if person[:friends].empty?
+  end
+  return result
+end
+
+#

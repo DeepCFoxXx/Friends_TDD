@@ -73,3 +73,23 @@ def no_friends(people)
 end
 
 #
+
+def same_tv_show( friends )
+  tv_shows = {}
+  result = {}
+  for friend in friends
+    show = friend[:favourites][:tv_show]
+    if tv_shows[show]
+      tv_shows[show].push(friend[:name])
+    else
+      tv_shows[show] = [friend[:name]]
+    end
+  end
+  puts "tv_shows=#{tv_shows}"
+  for i in tv_shows.keys
+    if tv_shows[i].size > 1
+      result[i] = tv_shows[i].reverse
+    end
+  end
+  return result
+end

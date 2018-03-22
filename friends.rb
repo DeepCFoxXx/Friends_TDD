@@ -16,3 +16,13 @@ end
 def add_friend(name, person)
   person[:friends] << name
 end
+
+def remove_friend(name, person)
+  result = nil
+  for friend in person[:friends]
+    result = friend if friend == name
+  end
+  if result != nil
+    person[:friends].delete(result)
+  end
+end

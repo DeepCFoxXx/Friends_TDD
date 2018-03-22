@@ -98,4 +98,28 @@ class TestFriends < MiniTest::Test
     assert_equal("Kara", @person5[:friends].pop)
   end
 
+  # 5. For a given person, remove a specific name from their list of friends
+  # (hint: Same as above, testing for the length of the array should be sufficient)
+
+  def test_remove_friend
+    remove_friend("Jay", @person1)
+    assert_equal(3, @person1[:friends].size)
+  end
+
+  # 6. Find the total of everyone's money
+  # (hint: use the people array)
+
+  # 7. For two given people, allow the first person to loan a given value of money to the other
+  # (hint: you need to pass in the lender, the lendee, and the amount for this function)
+  # (hint2: You should test if both the lender's and the lendee's money have changed)
+
+  # 8. Find the set of everyone's favourite food joined together
+  # (hint: concatenate the favourites/things_to_eat arrays together)
+
+  # 9. Find people with no friends
+  # (hint: return an array, there might be more people in the future with no friends!)
+
+  # Optional, VERY TOUGH
+  # 10. Find the people who have the same favourite tv show
+
 end

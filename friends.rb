@@ -46,3 +46,8 @@ def total_funds(people)
 end
 
 #
+
+def lend_money(giver, reciever, value)
+  giver[:monies] -= value
+  reciever[:monies] += value
+end

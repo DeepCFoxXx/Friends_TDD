@@ -51,3 +51,13 @@ def lend_money(giver, reciever, value)
   giver[:monies] -= value
   reciever[:monies] += value
 end
+
+#
+
+def all_foods(people)
+  foods = []
+  for person in people
+    foods.concat(person[:favourites][:things_to_eat])
+  end
+  return foods
+end

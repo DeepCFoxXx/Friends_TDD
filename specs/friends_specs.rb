@@ -90,4 +90,12 @@ class TestFriends < MiniTest::Test
     assert_equal(false, result)
   end
 
+  # 4. For a given person, add a new name to their list of friends
+  # (hint: Add a new string to the friends array, then test for the length of the array, not the return value of your add_friend method)
+
+  def test_add_friend
+    add_friend("Kara", @person5)
+    assert_equal("Kara", @person5[:friends].pop)
+  end
+
 end

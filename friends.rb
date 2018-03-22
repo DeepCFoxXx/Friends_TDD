@@ -12,3 +12,7 @@ def like_food(person, food)
   end
   return false
 end
+
+def add_friend(name, person)
+  person[:friends] << name
+end

@@ -141,4 +141,9 @@ class TestFriends < MiniTest::Test
   # Optional, VERY TOUGH
   # 10. Find the people who have the same favourite tv show
 
+  def test_same_tv_show
+    result = same_tv_show( @people )
+    assert_equal( { "Pokemon" => [ "Keith", "Val" ] }, result )
+  end
+
 end
